@@ -1,4 +1,4 @@
-package imdb.runners;
+package com.imdb.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

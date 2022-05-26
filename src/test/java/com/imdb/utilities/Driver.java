@@ -1,4 +1,4 @@
-package imdb.utilities;
+package com.imdb.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -9,8 +9,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Driver {
     private Driver() {
     }
-
-    private static WebDriver driver;
+                                                //ENCAPSULATION: driver is private, we call get() method
+    private static WebDriver driver;            //POLYMORPHISM: Interface = Child Class
+                                                //upcasting (done implicitly) WebDriver driver = (WebDriver) new ChromeDriver();
 
     public static WebDriver get() {
 

@@ -1,6 +1,6 @@
-package imdb.stepdefinitions;
+package com.imdb.stepdefinitions;
 
-import imdb.utilities.Driver;
+import com.imdb.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

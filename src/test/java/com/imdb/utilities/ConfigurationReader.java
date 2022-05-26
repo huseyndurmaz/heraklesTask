@@ -1,4 +1,4 @@
-package imdb.utilities;
+package com.imdb.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

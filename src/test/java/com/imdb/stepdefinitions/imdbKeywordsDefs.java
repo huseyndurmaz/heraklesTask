@@ -1,7 +1,7 @@
-package imdb.stepdefinitions;
+package com.imdb.stepdefinitions;
 
-import imdb.pages.IMDB;
-import imdb.utilities.Driver;
+import com.imdb.pages.IMDB;
+import com.imdb.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -49,7 +49,7 @@ public class imdbKeywordsDefs {
     public void the_user_clicks_on_the_tab_from_refine_section(String tabName) {
         WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(imdb.keywordsTab)).click();
-        //imdb.keywordsTab.click();
+        //com.imdb.keywordsTab.click();
     }
 
     @Then("the keywords are not sorted by name")
@@ -69,7 +69,23 @@ public class imdbKeywordsDefs {
 
     @Then("{string} is not a word in the keyword list")
     public void is_not_a_word_in_the_keyword_list(String keywordToVerify) {
+
+//        boolean inKeywordsList=false;
+//        for (String keyword : imdb.getKeywords()) {
+//            if (keyword.equals(keywordToVerify)){
+//                inKeywordsList=true;
+//                break;
+//            }
+//        }
+//        if(inKeywordsList) {
+//            System.out.println(keywordToVerify + " is in the Keyword List on IMDB. Test failed!");
+//        }else {
+//            System.out.println(keywordToVerify + " is NOT in the Keyword List on IMDB. Test passed.");
+//        }
+
         //verifying that "Incredible" is NOT a word in the List of keywords from IMDB
-        Assert.assertFalse(imdb.getKeywords().contains(keywordToVerify));
+        Assert.assertFalse("The keyword is NOT in keyword list", imdb.getKeywords().contains(keywordToVerify));
+
+        //comment
     }
 }

@@ -17,3 +17,4 @@ Feature: IMDB keywords on Bruce Willis page
     And the user selects "Genre" from the drop down element
     And the user clicks on the "Keywords" tab from refine section
     Then "Incredible" is not a word in the keyword list
+
